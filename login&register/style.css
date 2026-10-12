@@ -1,0 +1,568 @@
+
+/* ==============================
+   1. GLOBAL SETTINGS
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --primary-light: #eef2ff;
+
+    --background: #f5f6ff;
+    --white: #ffffff;
+
+    --heading: #1e1b4b;
+    --text: #64748b;
+    --border: #e2e8f0;
+    --input-bg: #fafbff;
+
+    --success: #16a34a;
+
+    --card-shadow:
+        0 20px 60px rgba(30, 27, 75, 0.08);
+
+    --transition: 0.25s ease;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--heading);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* ==============================
+   2. MAIN LAYOUT
+============================== */
+
+.auth-page {
+    width: 100%;
+    max-width: 1080px;
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    background: var(--white);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+/* ==============================
+   3. AUTH CARD
+============================== */
+
+.auth-card {
+    padding: 42px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--white);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 10px;
+    margin-bottom: 42px;
+    color: var(--heading);
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.brand-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        #a78bfa
+    );
+    color: var(--white);
+    font-size: 21px;
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.25);
+}
+
+/* ==============================
+   4. HEADINGS
+============================== */
+
+.auth-heading {
+    margin-bottom: 30px;
+}
+
+.heading-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 24px;
+}
+
+.auth-heading h1 {
+    margin-bottom: 10px;
+    color: var(--heading);
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.auth-heading p {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ==============================
+   5. FORM
+============================== */
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group label,
+.label-row label {
+    color: var(--heading);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-group input {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    background: var(--input-bg);
+    color: var(--heading);
+    font-family: inherit;
+    font-size: 13px;
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background var(--transition);
+}
+
+.form-group input::placeholder {
+    color: #a0aabe;
+}
+
+.form-group input:hover {
+    border-color: #c7d2fe;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+    background: var(--white);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+.input-hint {
+    color: var(--text);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.forgot-link {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* ==============================
+   6. CHECKBOXES
+============================== */
+
+.checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.7;
+    cursor: pointer;
+}
+
+.checkbox-row input {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.highlight-text {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.remember-row {
+    align-items: center;
+    margin-top: -5px;
+}
+
+.remember-row input {
+    margin-top: 0;
+}
+
+/* ==============================
+   7. BUTTON
+============================== */
+
+.auth-button {
+    width: 100%;
+    min-height: 49px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        #818cf8
+    );
+
+    color: var(--white);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        background var(--transition);
+}
+
+.auth-button span {
+    font-size: 19px;
+    transition: transform var(--transition);
+}
+
+.auth-button:hover {
+    background: linear-gradient(
+        135deg,
+        var(--primary-dark),
+        var(--primary)
+    );
+
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
+    transform: translateY(-2px);
+}
+
+.auth-button:hover span {
+    transform: translateX(4px);
+}
+
+.auth-button:active {
+    transform: translateY(0);
+}
+
+/* ==============================
+   8. FOOTER
+============================== */
+
+.auth-footer {
+    margin-top: 28px;
+    color: var(--text);
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.auth-footer a {
+    margin-left: 4px;
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.security-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 25px;
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+/* ==============================
+   9. DECORATIVE SIDE PANEL
+============================== */
+
+.auth-decoration {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 55px 45px;
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        #4338ca 0%,
+        #6366f1 48%,
+        #8b5cf6 100%
+    );
+
+    color: var(--white);
+}
+
+.decoration-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: #ddd6fe;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.decoration-content h2 {
+    margin-bottom: 20px;
+    font-size: 43px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.decoration-content > p {
+    max-width: 330px;
+    margin-bottom: 35px;
+    color: #e0e7ff;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    color: #f5f3ff;
+    font-size: 13px;
+}
+
+.feature-check {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ==============================
+   10. BACKGROUND ORBS
+============================== */
+
+.decoration-orb {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.orb-one {
+    width: 300px;
+    height: 300px;
+    top: -120px;
+    right: -100px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.orb-two {
+    width: 400px;
+    height: 400px;
+    right: -160px;
+    bottom: -240px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* ==============================
+   11. RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 850px) {
+    .auth-page {
+        max-width: 520px;
+        grid-template-columns: 1fr;
+    }
+
+    .auth-decoration {
+        display: none;
+    }
+
+    .auth-card {
+        padding: 40px;
+    }
+
+    .brand {
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .auth-page {
+        min-height: auto;
+        margin: auto 0;
+        border-radius: 18px;
+    }
+
+    .auth-card {
+        padding: 28px 22px;
+    }
+
+    .brand {
+        margin-bottom: 32px;
+        font-size: 19px;
+    }
+
+    .auth-heading h1 {
+        font-size: 26px;
+    }
+
+    .auth-heading p {
+        font-size: 13px;
+    }
+
+    .auth-form {
+        gap: 18px;
+    }
+
+    .auth-footer {
+        font-size: 12px;
+    }
+}
+
+/* Error Message */
+
+.displayError{
+   width: 100%;
+}
+.form-error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 16px;
+    margin: 12px 0 18px;
+
+    background-color: #fff1f2;
+    color: #be123c;
+
+    border: 1px solid #fecdd3;
+    border-left: 4px solid #e11d48;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    box-shadow: 0 3px 10px rgba(225, 29, 72, 0.06);
+    animation: errorFadeIn 0.3s ease;
+}
+
+/* Error Icon */
+
+
+.form-error::before {
+    content: "!";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+
+    border: 2px solid #e11d48;
+    border-radius: 50%;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Animation */
+@keyframes errorFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

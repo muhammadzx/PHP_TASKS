@@ -1,0 +1,53 @@
+a{color:#6366f1;text-decoration:none}
+button,input,textarea{font:inherit}
+button,a,input,textarea{outline-offset:4px}
+button{cursor:pointer}
+h1,h2,p{margin-top:0}
+h1{font-size:30px;letter-spacing:-1px;margin-bottom:6px}
+h2{font-size:19px;margin-bottom:2px}
+.page-heading,.panel-heading{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.eyebrow{font-size:10px;font-weight:750;color:#426bb0;letter-spacing:1.8px;margin-bottom:8px}
+.muted{color:#64748b;font-size:13px}
+.button{display:inline-flex;align-items:center;justify-content:center;background:#6366f1;color:#fff;border:1px solid #6366f1;padding:10px 17px;border-radius:8px;font-weight:600;white-space:nowrap}
+.button:hover{background:#4f46e5}
+.button.secondary{background:#fff;color:#42516a;border-color:#d7dfeb}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin:25px 0 30px}
+.stat{display:flex;gap:20px;align-items:flex-start;background:#fff;border:1px solid #e3e9f2;border-radius:12px;padding:25px}
+.stat p{margin:0;color:#64748b}
+.stat strong{display:block;font-size:34px;line-height:1.4;color:#172943}
+.stat small{color:#7c8a9d}
+.stat-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:12px;background:#eaf1ff;color:#6366f1;font-weight:bold;font-size:20px}
+.purple{background:#f2edff;color:#8054d9}
+.panel{background:#fff;border:1px solid #e3e9f2;border-radius:12px;margin-bottom:26px;overflow:hidden;scroll-margin-top:20px}
+.panel-heading{padding:22px 24px}
+.panel-heading p{margin:4px 0 0}
+.count{display:inline-block;font-size:12px;color:#64748b;background:#f0f3f8;padding:2px 8px;border-radius:6px;vertical-align:middle;margin-left:6px}
+.table-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;text-align:left;font-size:13px}
+th{background:#f8fafc;color:#64748b;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.6px;white-space:nowrap}
+th,td{padding:16px 22px;border-top:1px solid #edf0f5;vertical-align:top}
+td{overflow-wrap:anywhere}
+.strong{font-weight:650;color:#273a55}
+.description{min-width:180px;max-width:320px;white-space:pre-wrap}
+.actions{display:flex;gap:14px;white-space:nowrap}
+.actions form{margin:0}
+.danger-link{border:0;background:none;color:#c43646;padding:0;font-size:13px}
+.badge{display:inline-block;border-radius:6px;background:#eaf7f0;color:#22714e;padding:3px 9px;font-size:11px;font-weight:600}
+.badge.out{background:#fff1eb;color:#b3512d}
+.empty{text-align:center;padding:42px;color:#64748b}
+.notice{padding:14px 18px;border-radius:8px;margin-bottom:20px}
+.notice ul{margin:0;padding-left:20px}
+.success{background:#e7f6ed;color:#1f6b43}
+.error{background:#fff0f0;color:#ac263d}
+.form-panel{max-width:760px;padding:28px;margin-top:24px}
+label{display:block;font-weight:600;margin:16px 0 7px}
+input,textarea{display:block;width:100%;border:1px solid #cbd5e1;background:#fff;border-radius:7px;padding:11px 12px;color:#243348}
+input:focus,textarea:focus{outline:2px solid #b4ceff;border-color:#6366f1}
+textarea{resize:vertical}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-actions{display:flex;gap:12px;margin-top:24px}
+.back{display:inline-block;margin-bottom:20px}
+.full{width:100%;margin:24px 0 16px}
+.dashboard-nav{display:flex;gap:12px;margin:24px 0}.dashboard-nav a{padding:10px 18px;border:1px solid #dce5f1;border-radius:8px;background:white}.page-container{max-width:1400px}.topbar{gap:16px}.logout-btn{font:inherit;cursor:pointer}.panel .table-wrap{overflow-x:auto}.panel table{min-width:750px}body{overflow-wrap:anywhere}.form-panel{max-width:760px}.page-heading{margin-top:24px}.stats{margin-top:20px}button{font:inherit}a.button{color:white}.button.secondary{color:#42516a}@media(max-width:700px){.stats,.form-grid{grid-template-columns:1fr}.page-heading,.panel-heading{align-items:flex-start;flex-direction:column}.panel-heading{padding:18px}.user-details,.user-avatar{display:none}.topbar{flex-wrap:wrap}.form-panel{padding:18px}.dashboard-nav{flex-wrap:wrap}}
+
+.actions a,.back{color:var(--primary-dark)}.page-heading h1{margin-bottom:6px}.dashboard-nav a:hover{background:#eeedff}.topbar form{margin:0}.notice ul{padding-left:20px}

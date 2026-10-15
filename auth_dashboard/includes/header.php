@@ -1,0 +1,6 @@
+<?php $title=$title??'Dashboard'; ?>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title><?= h($title) ?> | AuthSystem</title><link rel="stylesheet" href="users.css"><link rel="stylesheet" href="dashboard.css"></head><body><main class="page-container">
+<header class="topbar"><a href="users.php" class="brand"><span class="brand-icon">A</span><span>AuthSystem</span></a><div class="user-info"><div class="user-avatar">A</div><div class="user-details"><span class="user-label">Signed in as</span><strong><?= h($_SESSION['user_name']) ?></strong></div><form action="logout.php" method="post"><?php csrf_field(); ?><button class="logout-btn">Logout</button></form></div></header>
+<nav class="dashboard-nav"><a href="users.php">Overview</a><a href="users.php#users">Users</a><a href="users.php#products">Products</a></nav>
+<?php if (isset($_SESSION['flash'])): ?><div class="notice success" role="status"><?= h($_SESSION['flash']) ?></div><?php unset($_SESSION['flash']); endif; ?>
+<?php if (!empty($errors)): ?><div class="notice error" role="alert"><ul><?php foreach ($errors as $error): ?><li><?= h($error) ?></li><?php endforeach; ?></ul></div><?php endif; ?>

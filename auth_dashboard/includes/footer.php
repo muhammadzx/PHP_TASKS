@@ -1,0 +1,1 @@
+<footer class="page-footer">&copy; <?= date('Y') ?> AuthSystem. All rights reserved.</footer></main><script src="assets/app.js"></script></body></html>
